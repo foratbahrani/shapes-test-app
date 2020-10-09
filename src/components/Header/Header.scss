@@ -1,0 +1,45 @@
+.header {
+	background-color: #333;
+	color: #fff;
+	width: 100%;
+	height: 80px;
+	line-height: 80px;
+}
+
+.header h1 {
+	margin-block-start: 0;
+	margin-block-end: 0;
+	display: inline;
+}
+
+.headerFlexBox {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+}
+
+.navbar {
+	display: inline;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+.navbar > li {
+	float: left;
+	padding: 0 16px;
+}
+
+.navbar > li > a {
+	color: #777;
+}
+
+.navbar > li > a:hover {
+	color: #aaa;
+}
+
+.navbar > li .active {
+	color: white;
+	text-decoration: underline;
+}

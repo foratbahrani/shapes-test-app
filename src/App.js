@@ -1,9 +1,11 @@
 import React from "react";
-import Container from "./containers/Container/Container";
+import Header from "./components/Header/Header";
 
 const App = () => {
 	return (
-		<Container size='lg'>hi</Container>
+		<>
+		<Header />
+		</>
 	);
 }
 
