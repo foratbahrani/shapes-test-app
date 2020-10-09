@@ -1,9 +1,13 @@
+// essential
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from 'react-router-dom';
+import * as serviceWorker from './serviceWorker';
+import ReactDOM from 'react-dom';
+// styles
+import './index.css';
+import './styles/styles.scss';
+// app
+import App from './App';
 
 ReactDOM.render(
 	<BrowserRouter>

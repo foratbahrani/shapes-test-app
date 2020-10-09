@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
+import Toolbar from '../../components/Toolbar/Toolbar';
+import Container from '../../containers/Container/Container';
 
 export default class ReduxSaga extends Component {
 	render() {
-		return <div>redux saga page</div>;
+		return (
+			<Container size='lg'>
+				<Toolbar />
+			</Container>
+		);
 	}
 }
