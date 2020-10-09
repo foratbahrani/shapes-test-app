@@ -1,7 +1,7 @@
 import React from 'react';
 
 const HeaderRefreshButton = () => {
-	const refresh = e => {
+	const refresh = () => {
 		console.log('refresh fired.');
 	};
 
