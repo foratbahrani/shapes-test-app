@@ -18,6 +18,20 @@
 	flex-direction: row;
 }
 
+.header .refreshButton {
+	border: none;
+	background-color: transparent;
+	color: #fff;
+	cursor: pointer;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+.header .refreshButton:focus {
+	outline: 0;
+}
+
 .navbar {
 	display: inline;
 	list-style-type: none;

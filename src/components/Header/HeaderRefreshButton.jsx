@@ -2,14 +2,13 @@ import React from 'react';
 
 const HeaderRefreshButton = () => {
 	const refresh = e => {
-		e.preventDefault();
 		console.log('refresh fired.');
 	};
 
 	return (
-		<a href='#' onClick={refresh}>
+		<button className='refreshButton' onClick={refresh}>
 			Refresh
-		</a>
+		</button>
 	);
 };
 
