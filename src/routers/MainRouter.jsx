@@ -3,11 +3,11 @@ import { Redirect, Route, Switch } from 'react-router-dom';
 import Spinner from '../components/Spinner/Spinner';
 import Centered from '../containers/Centered/Centered';
 
-// * lazy import
-// improves performance with slow connections
+// * lazy import pages
 const ReduxSaga = lazy(() => import('../pages/ReduxSaga/ReduxSaga'));
 const MVVM = lazy(() => import('../pages/MVVM/MVVM'));
 
+// Router
 const MainRouter = () => (
 	<Suspense fallback={fallback()}>
 		<Switch>
@@ -18,10 +18,12 @@ const MainRouter = () => (
 	</Suspense>
 );
 
+// Show spinner when loading
 const fallback = () => (
 	<Centered>
 		<Spinner />
 	</Centered>
 );
 
+// export
 export default MainRouter;
