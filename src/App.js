@@ -1,12 +1,9 @@
 import React from "react";
-import Spinner from "./components/Spinner/Spinner";
-import Centered from "./containers/Centered/Centered";
+import Container from "./containers/Container/Container";
 
 const App = () => {
 	return (
-		<Centered>
-			<Spinner />
-		</Centered>
+		<Container size='lg'>hi</Container>
 	);
 }
 
