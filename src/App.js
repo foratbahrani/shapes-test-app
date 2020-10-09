@@ -1,9 +1,13 @@
-import React from 'react';
+import React from "react";
+import Spinner from "./components/Spinner/Spinner";
+import Centered from "./containers/Centered/Centered";
 
-function App() {
-  return (
-    <>hi</>
-  );
+const App = () => {
+	return (
+		<Centered>
+			<Spinner />
+		</Centered>
+	);
 }
 
 export default App;

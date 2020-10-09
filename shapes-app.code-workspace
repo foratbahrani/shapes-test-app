@@ -1,15 +1,12 @@
 {
 	"folders": [
 		{
-			"path": ".."
+			"path": "."
 		}
 	],
 	"settings": {
 		"cSpell.words": [
 			"camelcase",
-			"eqeqeq",
-			"noopener",
-			"noreferrer",
 			"parens"
 		]
 	}

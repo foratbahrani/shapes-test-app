@@ -23,7 +23,6 @@
 		"no-unused-vars": "warn",
 		"spaced-comment": "warn",
 		"prefer-const": "warn",
-		"eqeqeq": "error",
 		"no-useless-constructor": "error",
 		"react/prop-types": "off",
 		"camelcase": [
