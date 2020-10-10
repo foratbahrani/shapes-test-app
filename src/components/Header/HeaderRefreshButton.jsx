@@ -1,15 +1,17 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { fetchShapesStart } from '../../store/shapes/shapes.actions';
 
-const HeaderRefreshButton = () => {
-	const refresh = () => {
-		console.log('refresh fired.');
-	};
-
+const HeaderRefreshButton = ({ refreshShapes }) => {
 	return (
-		<button className='refreshButton' onClick={refresh}>
+		<button className='refreshButton' onClick={refreshShapes}>
 			Refresh
 		</button>
 	);
 };
 
-export default HeaderRefreshButton;
+const mapDispatchToProps = {
+	refreshShapes: fetchShapesStart,
+};
+
+export default connect(null, mapDispatchToProps)(HeaderRefreshButton);

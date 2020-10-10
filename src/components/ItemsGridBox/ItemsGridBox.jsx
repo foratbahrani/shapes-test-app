@@ -1,4 +1,5 @@
 import React from 'react';
+import withSpinner from '../../containers/withSpinner/withSpinner';
 import './ItemsGridBox.scss';
 import ItemsGridBoxItem from './ItemsGridBoxItem';
 
@@ -22,4 +23,4 @@ const ItemsGridBox = () => {
 	);
 };
 
-export default ItemsGridBox;
+export default withSpinner(ItemsGridBox);
