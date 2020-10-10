@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { selectFilteredShapes } from '../../store/shapes/shapes.selectors';
 import { toggleFilteredShape } from '../../store/shapes/shapes.actions';
+import Shape from '../Shape/Shape';
 
 const ShapesMenuButton = ({ title, filteredShapes, toggleFilteredShape }) => {
 	const isActive = filteredShapes.includes(title)
@@ -13,7 +14,10 @@ const ShapesMenuButton = ({ title, filteredShapes, toggleFilteredShape }) => {
 		<button
 			className={`shapesMenuButton ${isActive}`}
 			onClick={() => toggleFilteredShape(title)}>
-			{title}
+			<span className='lg'>{title}</span>
+			<span className='md'>
+				<Shape size='sm' shape={title} color={isActive ? 'black' : null} />
+			</span>
 		</button>
 	);
 };

@@ -18,6 +18,8 @@ const Shape = ({ shape, color, size, isActive = false }) => {
 				return '#edcb59';
 			case 'purple':
 				return '#76147b';
+			case 'black':
+				return '#000000';
 			default:
 				return '#E0E0E0';
 		}
@@ -35,7 +37,14 @@ const Shape = ({ shape, color, size, isActive = false }) => {
 				/>
 			);
 		case 'round':
-			return <Circle r={perimeter / 2} fill={{ color: getColor() }} />;
+			return (
+				<Circle
+					r={perimeter / 2}
+					fill={{ color: getColor() }}
+					stroke={{ color: '#000000' }}
+					strokeWidth={isActive ? 2 : 0}
+				/>
+			);
 		case 'triangle':
 			return (
 				<Triangle

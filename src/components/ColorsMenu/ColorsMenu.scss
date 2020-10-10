@@ -1,4 +1,8 @@
 .colorsMenu {
 	display: flex;
 	gap: 12px;
+
+	@media (max-width: 468px) {
+		gap: 0;
+	}
 }

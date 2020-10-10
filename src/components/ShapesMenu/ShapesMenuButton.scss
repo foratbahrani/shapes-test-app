@@ -19,3 +19,15 @@
 .shapesMenuButton--active {
 	color: black;
 }
+
+.shapesMenuButton > .lg {
+	@media (max-width: 1000px) {
+		display: none;
+	}
+}
+
+.shapesMenuButton > .md {
+	@media (min-width: 1000px) {
+		display: none;
+	}
+}
