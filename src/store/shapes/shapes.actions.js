@@ -18,3 +18,8 @@ export const toggleFilteredShape = payload => ({
 	type: ShapesActionTypes.TOGGLE_FILTERED_SHAPE,
 	payload,
 });
+
+export const toggleFilteredColor = payload => ({
+	type: ShapesActionTypes.TOGGLE_FILTERED_COLOR,
+	payload,
+});

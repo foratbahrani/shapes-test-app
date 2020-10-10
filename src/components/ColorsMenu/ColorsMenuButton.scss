@@ -1,0 +1,13 @@
+.colorsMenuButton {
+	appearance: none;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	padding: 0;
+	margin: 0 8px;
+	height: 30px;
+}
+
+.colorsMenuButton:focus {
+	outline: 0;
+}

@@ -2,8 +2,10 @@ import React from 'react';
 import { Rectangle, Circle, Ellipse, Triangle } from 'react-shapes';
 import './Shape.scss';
 
-const Shape = ({ shape, color, size }) => {
-	const perimeter = size === 'lg' ? 200 : 30;
+const Shape = ({ shape, color, size, isActive = false }) => {
+	let perimeter = size === 'lg' ? 200 : 30;
+	if (isActive) perimeter -= 4; // 4px will be reserved for border width
+
 	const getColor = () => {
 		switch (color) {
 			case 'red':
@@ -28,6 +30,8 @@ const Shape = ({ shape, color, size }) => {
 					width={perimeter}
 					height={perimeter}
 					fill={{ color: getColor() }}
+					stroke={{ color: '#000000' }}
+					strokeWidth={isActive ? 2 : 0}
 				/>
 			);
 		case 'round':
@@ -38,6 +42,8 @@ const Shape = ({ shape, color, size }) => {
 					width={perimeter}
 					height={perimeter}
 					fill={{ color: getColor() }}
+					stroke={{ color: '#000000' }}
+					strokeWidth={isActive ? 2 : 0}
 				/>
 			);
 		case 'oval':
@@ -46,6 +52,8 @@ const Shape = ({ shape, color, size }) => {
 					rx={perimeter / 2}
 					ry={perimeter / 2.5}
 					fill={{ color: getColor() }}
+					stroke={{ color: '#000000' }}
+					strokeWidth={isActive ? 2 : 0}
 				/>
 			);
 		case 'rectangle':
@@ -54,6 +62,8 @@ const Shape = ({ shape, color, size }) => {
 					width={perimeter}
 					height={perimeter / 1.5}
 					fill={{ color: getColor() }}
+					stroke={{ color: '#000000' }}
+					strokeWidth={isActive ? 2 : 0}
 				/>
 			);
 		default:

@@ -45,6 +45,20 @@ const shapesReducer = (state = initialState, { type, payload }) => {
 					shapes,
 				},
 			};
+		case ShapesActionTypes.TOGGLE_FILTERED_COLOR:
+			var { colors } = state.filters;
+
+			if (colors.includes(payload))
+				colors = colors.filter(v => v !== payload);
+			else colors = [...colors, payload];
+
+			return {
+				...state,
+				filters: {
+					shapes: [...state.filters.shapes],
+					colors,
+				},
+			};
 		default:
 			return state;
 	}

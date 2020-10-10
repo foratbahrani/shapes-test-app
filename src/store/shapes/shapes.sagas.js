@@ -1,4 +1,3 @@
-import { Provider } from 'react-redux';
 import { all, call, delay, put, takeLatest } from 'redux-saga/effects';
 import shapesRawData from '../../assets/data';
 import { fetchShapesFailure, fetchShapesSuccess } from './shapes.actions';

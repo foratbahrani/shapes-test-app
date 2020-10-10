@@ -11,9 +11,7 @@ const ShapesMenuButton = ({ title, filteredShapes, toggleFilteredShape }) => {
 		: null;
 	return (
 		<button
-			className={`shapesMenuButton ${
-				isActive ? 'shapesMenuButton--active' : undefined
-			}`}
+			className={`shapesMenuButton ${isActive}`}
 			onClick={() => toggleFilteredShape(title)}>
 			{title}
 		</button>
