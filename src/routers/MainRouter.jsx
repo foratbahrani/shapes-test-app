@@ -1,7 +1,7 @@
 import React from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
 import MVVM from '../pages/MVVM/MVVM';
-import { ReduxSaga } from '../pages/ReduxSaga/ReduxSaga';
+import ReduxSaga from '../pages/ReduxSaga/ReduxSaga';
 
 // Router
 const MainRouter = () => (

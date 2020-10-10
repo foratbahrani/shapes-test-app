@@ -8,8 +8,7 @@ import { fetchShapesStart } from '../../store/shapes/shapes.actions';
 
 export class ReduxSaga extends Component {
 	componentDidMount() {
-		const { fetchShapes } = this.props;
-		if (fetchShapes) fetchShapes();
+		this.props.fetchShapes();
 	}
 
 	render() {
