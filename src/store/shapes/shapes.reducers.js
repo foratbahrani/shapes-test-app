@@ -1,5 +1,6 @@
 const initialState = {
 	data: undefined,
+	isFetching: false,
 	filter: {
 		shapes: [],
 		colors: [],

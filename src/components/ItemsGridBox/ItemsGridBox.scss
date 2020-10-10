@@ -1,9 +1,7 @@
-.itemsGridBox {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-}
+$this-padding: 5px;
 
-.itemsGridBox > * {
-	margin: 1em 1em;
+.itemsGridBox {
+	padding: 0;
+	margin: -$this-padding;
+	font-size: 0;
 }

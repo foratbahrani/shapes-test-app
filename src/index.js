@@ -8,11 +8,15 @@ import './index.css';
 import './styles/styles.scss';
 // app
 import App from './App';
+import { Provider } from 'react-redux';
+import { store } from './store/store';
 
 ReactDOM.render(
-	<BrowserRouter>
-		<App />
-	</BrowserRouter>,
+	<Provider store={store}>
+		<BrowserRouter>
+			<App />
+		</BrowserRouter>
+	</Provider>,
 	document.getElementById('root')
 );
 

@@ -3,7 +3,7 @@ import { Rectangle, Circle, Ellipse, Triangle } from 'react-shapes';
 import './Shape.scss';
 
 const Shape = ({ shape, color, size }) => {
-	const perimeter = size === 'lg' ? 100 : 30;
+	const perimeter = size === 'lg' ? 200 : 30;
 
 	switch (shape) {
 		case 'square':
