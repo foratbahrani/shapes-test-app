@@ -19,7 +19,7 @@ const Shape = ({ shape, color, size, isActive = false }) => {
 			case 'purple':
 				return '#76147b';
 			default:
-				return '#000000';
+				return '#E0E0E0';
 		}
 	};
 

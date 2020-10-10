@@ -23,3 +23,7 @@ export const toggleFilteredColor = payload => ({
 	type: ShapesActionTypes.TOGGLE_FILTERED_COLOR,
 	payload,
 });
+
+export const resetFilters = () => ({
+	type: ShapesActionTypes.RESET_FILTERS,
+});

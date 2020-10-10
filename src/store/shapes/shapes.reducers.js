@@ -1,6 +1,6 @@
 import ShapesActionTypes from './shapes.types';
 
-const initialState = {
+export const initialState = {
 	data: [],
 	isFetching: false,
 	error: undefined,
@@ -58,6 +58,11 @@ const shapesReducer = (state = initialState, { type, payload }) => {
 					shapes: [...state.filters.shapes],
 					colors,
 				},
+			};
+		case ShapesActionTypes.RESET_FILTERS:
+			return {
+				...state,
+				filters: { ...initialState.filters },
 			};
 		default:
 			return state;
