@@ -13,3 +13,8 @@ export const fetchShapesFailure = payload => ({
 	type: ShapesActionTypes.FETCH_SHAPES_FAILURE,
 	payload,
 });
+
+export const toggleFilteredShape = payload => ({
+	type: ShapesActionTypes.TOGGLE_FILTERED_SHAPE,
+	payload,
+});

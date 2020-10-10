@@ -4,9 +4,9 @@ const initialState = {
 	data: [],
 	isFetching: false,
 	error: undefined,
-	filter: {
-		shapes: [],
-		colors: [],
+	filters: {
+		shapes: ['round', 'square', 'triangle', 'oval', 'rectangle'],
+		colors: ['purple', 'red', 'green', 'blue', 'yellow'],
 	},
 };
 
@@ -30,6 +30,20 @@ const shapesReducer = (state = initialState, { type, payload }) => {
 				data: [],
 				error: payload,
 				isFetching: false,
+			};
+		case ShapesActionTypes.TOGGLE_FILTERED_SHAPE:
+			var { shapes } = state.filters;
+
+			if (shapes.includes(payload))
+				shapes = shapes.filter(v => v !== payload);
+			else shapes = [...shapes, payload];
+
+			return {
+				...state,
+				filters: {
+					colors: [...state.filters.colors],
+					shapes,
+				},
 			};
 		default:
 			return state;

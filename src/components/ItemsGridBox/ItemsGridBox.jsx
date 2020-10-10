@@ -1,26 +1,27 @@
 import React from 'react';
 import withSpinner from '../../containers/withSpinner/withSpinner';
-import './ItemsGridBox.scss';
+import { connect } from 'react-redux';
 import ItemsGridBoxItem from './ItemsGridBoxItem';
+import './ItemsGridBox.scss';
+import { createStructuredSelector } from 'reselect';
+import { selectFilteredData } from '../../store/shapes/shapes.selectors';
 
-const ItemsGridBox = () => {
+const ItemsGridBox = ({ data }) => {
+	const items = () => {
+		return data.map(({ id, color, shape }) => {
+			return <ItemsGridBoxItem key={id} color={color} shape={shape} />;
+		});
+	};
+
 	return (
 		<div className='itemsGridBoxContainer'>
-			<div className='itemsGridBox'>
-				<ItemsGridBoxItem />
-				<ItemsGridBoxItem />
-				<ItemsGridBoxItem />
-				<ItemsGridBoxItem />
-				<ItemsGridBoxItem />
-				<ItemsGridBoxItem />
-				<ItemsGridBoxItem />
-				<ItemsGridBoxItem />
-				<ItemsGridBoxItem />
-				<ItemsGridBoxItem />
-				<ItemsGridBoxItem />
-			</div>
+			<div className='itemsGridBox'>{items()}</div>
 		</div>
 	);
 };
 
-export default withSpinner(ItemsGridBox);
+const mapStateToProps = createStructuredSelector({
+	data: selectFilteredData,
+});
+
+export default withSpinner(connect(mapStateToProps)(ItemsGridBox));

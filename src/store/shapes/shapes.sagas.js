@@ -5,7 +5,7 @@ import { fetchShapesFailure, fetchShapesSuccess } from './shapes.actions';
 import ShapesActionTypes from './shapes.types';
 
 export function* fetchShapesAsync() {
-	yield delay(3000); // simulates internet connection delay
+	yield delay(1000); // simulates internet connection delay
 	const rawData = shapesRawData;
 	try {
 		const json = JSON.parse(rawData);
