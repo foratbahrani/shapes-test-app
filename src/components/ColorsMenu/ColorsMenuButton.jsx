@@ -10,7 +10,7 @@ const ColorsMenuButton = ({ color, filteredColors, toggleFilteredColor }) => {
 	const isActive = filteredColors.includes(color);
 	return (
 		<button
-			className={`colorsMenuButton`}
+			className='colorsMenuButton shrink'
 			onClick={() => toggleFilteredColor(color)}>
 			<Shape
 				key={color}

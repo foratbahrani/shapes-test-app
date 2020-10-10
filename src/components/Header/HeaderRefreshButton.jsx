@@ -4,7 +4,7 @@ import { fetchShapesStart } from '../../store/shapes/shapes.actions';
 
 const HeaderRefreshButton = ({ refreshShapes }) => {
 	return (
-		<button className='refreshButton' onClick={refreshShapes}>
+		<button className='refreshButton shrink' onClick={refreshShapes}>
 			Refresh
 		</button>
 	);

@@ -12,7 +12,7 @@ const ShapesMenuButton = ({ title, filteredShapes, toggleFilteredShape }) => {
 		: null;
 	return (
 		<button
-			className={`shapesMenuButton ${isActive}`}
+			className={`shapesMenuButton ${isActive} shrink`}
 			onClick={() => toggleFilteredShape(title)}>
 			<span className='lg'>{title}</span>
 			<span className='md'>
