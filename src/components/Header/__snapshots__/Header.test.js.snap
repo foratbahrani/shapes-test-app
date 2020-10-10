@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="header"
+>
+  <Container
+    size="lg"
+  >
+    <div
+      className="headerFlexBox"
+    >
+      <ul
+        className="navbar"
+      >
+        <li>
+          <h1>
+            SHAPES
+          </h1>
+        </li>
+        <li>
+          <withRouter(HeaderLink)
+            to="/redux-saga"
+          >
+            ReduxSaga
+          </withRouter(HeaderLink)>
+        </li>
+        <li>
+          <withRouter(HeaderLink)
+            to="/mvvm"
+          >
+            MVVM
+          </withRouter(HeaderLink)>
+        </li>
+      </ul>
+      <Connect(HeaderRefreshButton) />
+    </div>
+  </Container>
+</div>
+`;

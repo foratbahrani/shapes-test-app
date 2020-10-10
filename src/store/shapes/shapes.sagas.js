@@ -3,9 +3,8 @@ import shapesRawData from '../../assets/data';
 import { fetchShapesFailure, fetchShapesSuccess } from './shapes.actions';
 import ShapesActionTypes from './shapes.types';
 
-export function* fetchShapesAsync() {
+export function* fetchShapesAsync(rawData) {
 	yield delay(1000); // simulates internet connection delay
-	const rawData = shapesRawData;
 	try {
 		const json = JSON.parse(rawData);
 		yield put(fetchShapesSuccess(json));
@@ -15,7 +14,7 @@ export function* fetchShapesAsync() {
 }
 
 export function* fetchShapesStart() {
-	yield takeLatest(ShapesActionTypes.FETCH_SHAPES_START, fetchShapesAsync);
+	yield takeLatest(ShapesActionTypes.FETCH_SHAPES_START, fetchShapesAsync(shapesRawData));
 }
 
 export function* shapesSagas() {

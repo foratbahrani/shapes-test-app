@@ -2,13 +2,10 @@ import React from 'react';
 import './GridTitleLabel.scss';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
-import {
-	selectFilteredColors,
-	selectFilteredShapes,
-} from '../../store/shapes/shapes.selectors';
+import { selectFilteredColors, selectFilteredShapes } from '../../store/shapes/shapes.selectors';
 import { initialState } from '../../store/shapes/shapes.reducers';
 
-const GridTitleLabel = ({ filteredColors, filteredShapes }) => {
+export const GridTitleLabel = ({ filteredColors, filteredShapes }) => {
 	const createTitle = () => {
 		const allColorsLength = initialState.filters.colors.length;
 		const allShapesLength = initialState.filters.shapes.length;
@@ -20,14 +17,12 @@ const GridTitleLabel = ({ filteredColors, filteredShapes }) => {
 		if (noItems) return 'No items.';
 
 		// single item (exactly one shape AND one color are selected)
-		const singleItem =
-			filteredColorsLength === 1 && filteredShapesLength === 1;
+		const singleItem = filteredColorsLength === 1 && filteredShapesLength === 1;
 		if (singleItem) return `${filteredShapes[0]} ${filteredColors[0]} items:`;
 
 		// all items
 		const allItems =
-			allColorsLength === filteredColorsLength &&
-			allShapesLength === filteredShapesLength;
+			allColorsLength === filteredColorsLength && allShapesLength === filteredShapesLength;
 		if (allItems) return 'All items:';
 
 		// one shape & all colors
@@ -41,26 +36,24 @@ const GridTitleLabel = ({ filteredColors, filteredShapes }) => {
 		if (allOneColorItems) return `All ${filteredColors[0]} items:`;
 
 		// one shape & multiple colors
-		const multipleOneShapeItems =
-			filteredShapesLength === 1 && filteredColorsLength > 1;
+		const multipleOneShapeItems = filteredShapesLength === 1 && filteredColorsLength > 1;
 		if (multipleOneShapeItems) return `Multiple ${filteredShapes[0]} items:`;
 
 		// one color & multiple shapes
-		const multipleOneColorItems =
-			filteredShapesLength > 1 && filteredColorsLength === 1;
+		const multipleOneColorItems = filteredShapesLength > 1 && filteredColorsLength === 1;
 		if (multipleOneColorItems) return `Multiple ${filteredColors[0]} items:`;
 
 		// multiple shapes & colors
-		const multipleItems =
-			filteredShapesLength > 1 && filteredColorsLength > 1;
-		if (multipleItems) return `Multiple items:`;
-
-		// will never reach here
-		return 'Error';
+		return `Multiple items:`;
 	};
 
-	return <span className='GridTitleLabel'>{createTitle()}</span>;
+	return (
+		<span className='GridTitleLabel' id='GridTitleLabel'>
+			{createTitle()}
+		</span>
+	);
 };
+
 const mapStateToProps = createStructuredSelector({
 	filteredColors: selectFilteredColors,
 	filteredShapes: selectFilteredShapes,

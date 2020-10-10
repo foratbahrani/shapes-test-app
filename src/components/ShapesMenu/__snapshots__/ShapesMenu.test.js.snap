@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="shapesMenu"
+>
+  <Connect(ShapesMenuButton)
+    key="round"
+    title="round"
+  />
+  <Connect(ShapesMenuButton)
+    key="square"
+    title="square"
+  />
+  <Connect(ShapesMenuButton)
+    key="triangle"
+    title="triangle"
+  />
+  <Connect(ShapesMenuButton)
+    key="oval"
+    title="oval"
+  />
+  <Connect(ShapesMenuButton)
+    key="rectangle"
+    title="rectangle"
+  />
+</div>
+`;

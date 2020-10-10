@@ -2,9 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { fetchShapesStart } from '../../store/shapes/shapes.actions';
 
-const HeaderRefreshButton = ({ refreshShapes }) => {
+export const HeaderRefreshButton = ({ refreshShapes }) => {
 	return (
-		<button className='refreshButton shrink' onClick={refreshShapes}>
+		<button className='refreshButton shrink' id='button' onClick={refreshShapes}>
 			Refresh
 		</button>
 	);

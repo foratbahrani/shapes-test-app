@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="itemsGridBoxContainer"
+>
+  <div
+    className="itemsGridBox"
+  >
+    <ItemsGridBoxItem
+      color="red"
+      key="1"
+      shape="square"
+    />
+  </div>
+</div>
+`;

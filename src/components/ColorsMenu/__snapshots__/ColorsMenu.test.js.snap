@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="colorsMenu"
+>
+  <Connect(ColorsMenuButton)
+    color="purple"
+    key="purple"
+  />
+  <Connect(ColorsMenuButton)
+    color="red"
+    key="red"
+  />
+  <Connect(ColorsMenuButton)
+    color="green"
+    key="green"
+  />
+  <Connect(ColorsMenuButton)
+    color="blue"
+    key="blue"
+  />
+  <Connect(ColorsMenuButton)
+    color="yellow"
+    key="yellow"
+  />
+  <Connect(ResetFiltersButton) />
+</div>
+`;

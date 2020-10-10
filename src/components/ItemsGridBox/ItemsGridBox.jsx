@@ -6,7 +6,7 @@ import './ItemsGridBox.scss';
 import { createStructuredSelector } from 'reselect';
 import { selectFilteredData } from '../../store/shapes/shapes.selectors';
 
-const ItemsGridBox = ({ data }) => {
+export const ItemsGridBox = ({ data }) => {
 	const items = () => {
 		return data.map(({ id, color, shape }) => {
 			return <ItemsGridBoxItem key={id} color={color} shape={shape} />;

@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<button
+  className="shapesMenuButton  shrink"
+  id="button"
+  onClick={[Function]}
+>
+  <span
+    className="lg"
+  />
+  <span
+    className="md"
+  >
+    <Shape
+      color=""
+      id="shape"
+      size="sm"
+    />
+  </span>
+</button>
+`;

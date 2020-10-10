@@ -6,6 +6,8 @@ const Shape = ({ shape, color, size, isActive = false }) => {
 	let perimeter = size === 'lg' ? 200 : 30;
 	if (isActive) perimeter -= 4; // 4px will be reserved for border width
 
+	const strokeWith = isActive ? 2 : 0;
+
 	const getColor = () => {
 		switch (color) {
 			case 'red':
@@ -33,7 +35,7 @@ const Shape = ({ shape, color, size, isActive = false }) => {
 					height={perimeter}
 					fill={{ color: getColor() }}
 					stroke={{ color: '#000000' }}
-					strokeWidth={isActive ? 2 : 0}
+					strokeWidth={strokeWith}
 				/>
 			);
 		case 'round':
@@ -42,7 +44,7 @@ const Shape = ({ shape, color, size, isActive = false }) => {
 					r={perimeter / 2}
 					fill={{ color: getColor() }}
 					stroke={{ color: '#000000' }}
-					strokeWidth={isActive ? 2 : 0}
+					strokeWidth={strokeWith}
 				/>
 			);
 		case 'triangle':
@@ -52,7 +54,7 @@ const Shape = ({ shape, color, size, isActive = false }) => {
 					height={perimeter}
 					fill={{ color: getColor() }}
 					stroke={{ color: '#000000' }}
-					strokeWidth={isActive ? 2 : 0}
+					strokeWidth={strokeWith}
 				/>
 			);
 		case 'oval':
@@ -62,7 +64,7 @@ const Shape = ({ shape, color, size, isActive = false }) => {
 					ry={perimeter / 2.5}
 					fill={{ color: getColor() }}
 					stroke={{ color: '#000000' }}
-					strokeWidth={isActive ? 2 : 0}
+					strokeWidth={strokeWith}
 				/>
 			);
 		case 'rectangle':
@@ -72,7 +74,7 @@ const Shape = ({ shape, color, size, isActive = false }) => {
 					height={perimeter / 1.5}
 					fill={{ color: getColor() }}
 					stroke={{ color: '#000000' }}
-					strokeWidth={isActive ? 2 : 0}
+					strokeWidth={strokeWith}
 				/>
 			);
 		default:

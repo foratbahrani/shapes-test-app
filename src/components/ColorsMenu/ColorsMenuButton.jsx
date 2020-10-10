@@ -6,19 +6,14 @@ import { toggleFilteredColor } from '../../store/shapes/shapes.actions';
 import Shape from '../Shape/Shape';
 import './ColorsMenuButton.scss';
 
-const ColorsMenuButton = ({ color, filteredColors, toggleFilteredColor }) => {
+export const ColorsMenuButton = ({ color, filteredColors, toggleFilteredColor }) => {
 	const isActive = filteredColors.includes(color);
 	return (
 		<button
 			className='colorsMenuButton shrink'
+			id='button'
 			onClick={() => toggleFilteredColor(color)}>
-			<Shape
-				key={color}
-				color={color}
-				shape='square'
-				size='sm'
-				isActive={isActive}
-			/>
+			<Shape key={color} color={color} shape='square' size='sm' isActive={isActive} />
 		</button>
 	);
 };

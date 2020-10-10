@@ -12,8 +12,7 @@ const withSpinner = WrappedComponent => {
 		</Centered>
 	);
 
-	const HOC = ({ isLoading }) =>
-		isLoading ? fallback() : <WrappedComponent />;
+	const HOC = ({ isLoading }) => (isLoading ? fallback() : <WrappedComponent />);
 
 	const mapStateToProps = createStructuredSelector({
 		isLoading: selectIsFetching,

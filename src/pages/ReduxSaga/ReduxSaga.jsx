@@ -6,9 +6,10 @@ import Toolbar from '../../components/Toolbar/Toolbar';
 import Container from '../../containers/Container/Container';
 import { fetchShapesStart } from '../../store/shapes/shapes.actions';
 
-class ReduxSaga extends Component {
+export class ReduxSaga extends Component {
 	componentDidMount() {
-		this.props.fetchShapes();
+		const { fetchShapes } = this.props;
+		if (fetchShapes) fetchShapes();
 	}
 
 	render() {
@@ -22,8 +23,8 @@ class ReduxSaga extends Component {
 	}
 }
 
-const mapDispatchToProps = dispatch => ({
-	fetchShapes: () => dispatch(fetchShapesStart()),
-});
+const mapDispatchToProps = {
+	fetchShapes: fetchShapesStart,
+};
 
 export default connect(null, mapDispatchToProps)(ReduxSaga);

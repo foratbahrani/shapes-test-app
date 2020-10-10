@@ -6,17 +6,16 @@ import { selectFilteredShapes } from '../../store/shapes/shapes.selectors';
 import { toggleFilteredShape } from '../../store/shapes/shapes.actions';
 import Shape from '../Shape/Shape';
 
-const ShapesMenuButton = ({ title, filteredShapes, toggleFilteredShape }) => {
-	const isActive = filteredShapes.includes(title)
-		? 'shapesMenuButton--active'
-		: null;
+export const ShapesMenuButton = ({ title, filteredShapes, toggleFilteredShape }) => {
+	const isActive = filteredShapes.includes(title) ? 'shapesMenuButton--active' : '';
 	return (
 		<button
 			className={`shapesMenuButton ${isActive} shrink`}
+			id='button'
 			onClick={() => toggleFilteredShape(title)}>
 			<span className='lg'>{title}</span>
 			<span className='md'>
-				<Shape size='sm' shape={title} color={isActive ? 'black' : null} />
+				<Shape id='shape' size='sm' shape={title} color={isActive ? 'black' : ''} />
 			</span>
 		</button>
 	);
