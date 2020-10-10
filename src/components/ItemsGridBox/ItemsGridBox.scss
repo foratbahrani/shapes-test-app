@@ -1,0 +1,9 @@
+.itemsGridBox {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.itemsGridBox > * {
+	margin: 1em 1em;
+}
